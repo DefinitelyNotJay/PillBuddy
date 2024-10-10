@@ -24,7 +24,6 @@ export default function RootLayout({
 		<html lang="en">
 			
 			<body className={cn('min-h-screen, bg-background font-sans antialiased', inter.variable)}>
-			
 				{children}
 				<nav className={`${scrollDir === "down" && 'hidden'} shadow-md border fixed flex items-center justify-between bottom-0 w-full h-16 px-12 py-2`}>
 					<Link href={"/calendar"} className='text-gray-500 hover:text-black'><Calendar size={36} /></Link>
