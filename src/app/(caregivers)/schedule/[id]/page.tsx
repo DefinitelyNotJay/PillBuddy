@@ -13,18 +13,20 @@ const page = async ({ params }: { params: { id: string } }) => {
 			notification.medicines.push({
 				name: curr.medicine,
 				amount: curr.amount,
-				timing: curr.timing
+				timing: curr.timing,
 			});
 		} else {
 			acc.push({
 				id: curr.id,
 				time: curr.time,
 				meal: curr.meal,
-				medicines: [{
-					name: curr.medicine,
-					quantity: curr.quantity,
-					timing: curr.timing
-				}]
+				medicines: [
+					{
+						name: curr.medicine,
+						quantity: curr.quantity,
+						timing: curr.timing,
+					},
+				],
 			});
 		}
 		return acc;
@@ -34,7 +36,7 @@ const page = async ({ params }: { params: { id: string } }) => {
 	return (
 		<div className="p-6">
 			<AddButton name="Notification" to={`/notification/create`} />
-			<div className="grid justify-items-center w-full gap-y-4 mt-8">
+			<div className="grid w-full gap-y-4 mt-8 p-4">
 				{notifications.map((notification: NotificationSchema) => (
 					<NotificationList key={notification.id} notification={notification} />
 				))}
