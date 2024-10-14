@@ -9,12 +9,11 @@ const ScheduleCard = ({ schedule }: { schedule: ScheduleCardType }) => {
 	return (
 		<div
 			key={schedule.scheduleId}
-			className="bg-gray-200 p-4 cursor-pointer rounded-md"
+			className="shadow-md rounded-md p-4 cursor-pointer rounded-md"
 			onClick={() => {
 				return router.push(`/schedule/${schedule.scheduleId}`);
 			}}
 		>
-			{/* <p>{schedule.caregiverName}</p> */}
 			<p>{schedule.scheduleId}</p>
 			<p>{schedule.patientName}</p>
 			<p>{schedule.patientAge} years</p>
