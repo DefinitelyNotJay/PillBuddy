@@ -12,8 +12,8 @@ import twilio from 'twilio';
 export const dynamic = 'force-dynamic';
 export const revalidate = 1;
 export async function GET(req: NextRequest, res: NextResponse) {
-	const accountSid = process.env.NEXT_PUBLIC_TWILIO_ACCOUNT_SID;
-	const authToken = process.env.NEXT_PUBLIC_TWILIO_AUTH_TOKEN;
+	const accountSid = "AC9ceaafdeb5d267965a31dd119d9b6310";
+	const authToken = "2217965bf786b97700b4f042dc93bafe";
 	const client = twilio(accountSid, authToken);
 
 	const getCurrentTime = (mHour = 0, mMinute = 0): string => {
